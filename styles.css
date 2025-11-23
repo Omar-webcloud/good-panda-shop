@@ -136,7 +136,7 @@ header {
   margin-bottom: 30px;
 }
 
-/* Wrapper to keep 3 cards in one row */
+
 .product-wrapper {
   display: flex;
   gap: 25px;
@@ -352,7 +352,7 @@ header {
     font-size: 14px;
   }
 
-  /* If your product grid uses flex */
+  
   .products {
     display: flex;
     flex-direction: column;
