@@ -1,8 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-pink: #ff589b;
+  --bg-pink: #feeae9;
+  --accent-orange: #ff9c35;
+  --accent-blue: #3f07f8;
+  --accent-magenta: #ff136f;
+  --text-dark: #3a3a3a;
+  --text-gray: #606060;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 5%;
+}
+
+.logo {
+  width: 120px;
+}
+
+.hamburger {
+  font-size: 32px;
+  cursor: pointer;
+  display: none; 
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-pink);
+  padding: 50px 5%;
+  border-radius: 10px;
+  margin: 20px 5%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  color: var(--text-gray);
+}
+
+.price {
+  color: var(--primary-pink);
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero button {
+  background-color: var(--primary-pink);
+  color: var(--white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero button:hover {
+  background-color: var(--accent-magenta);
+  transform: translateY(-2px);
+}
+
+.buy-btn {
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.buy-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  margin: 60px 0 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* CATEGORY SECTION */
+.categories {
+  padding: 0 5%;
+  margin-top: 40px;
+}
+
+.category-wrapper {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px 30px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+}
+
+.cat-watch {
+  background: var(--accent-orange);
+}
+.cat-bag {
+  background: var(--accent-magenta);
+}
+.cat-shoes {
+  background: var(--accent-blue);
+}
+
+.cat-card img {
+  width: 60px;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
+.product-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid #eee; /* Lighter border than before */
+  text-align: left;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.product-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* NEWSLETTER SECTION */
+.newsletter {
+  padding: 80px 5%;
+  background: var(--bg-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.newsletter-box {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--text-gray);
+}
+
+.newsletter p {
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 16px;
+}
+
+.newsletter-form .send-btn {
+  background: var(--primary-pink);
+  color: var(--white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-form .send-btn:hover {
+  background: #e04885;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse; /* Text on top on mobile usually, or image on top? Let's keep typical stacking */
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* Actually default flex-wrap does row wrapping. 
+     If we want image under text, row-reverse if wrap happens? 
+     Let's just center align. */
+  .hero-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter-form input,
+  .newsletter-form .send-btn {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
 }
 
 /* HEADER */
@@ -30,20 +351,20 @@ header {
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
-  background: #FEEAE9;
+  background: #feeae9;
   padding: 50px 5%;
   flex-wrap: wrap;
   border-radius: 10px;
   margin: 5%;
 }
 
-.hero button{
-    background-color: #FF589B;
-    outline: none;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
+.hero button {
+  background-color: #ff589b;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
 }
 
 .hero-text {
@@ -59,7 +380,7 @@ header {
 }
 
 .price {
-  color: #FF589B;
+  color: #ff589b;
 }
 
 .hero-img img {
@@ -101,26 +422,22 @@ header {
   font-weight: 600;
 }
 
-
 .cat-watch {
-  background: #FF9C35; 
+  background: #ff9c35;
 }
 
 .cat-bag {
-  background: #FF136F; 
+  background: #ff136f;
 }
 
 .cat-shoes {
-  background: #3F07F8; 
+  background: #3f07f8;
 }
 
 .cat-card img {
   width: 60px;
   height: auto;
 }
-
-
-
 
 /* PRODUCT SECTION  */
 
@@ -135,7 +452,6 @@ header {
   font-weight: 700;
   margin-bottom: 30px;
 }
-
 
 .product-wrapper {
   display: flex;
@@ -185,7 +501,7 @@ header {
 
 /* Button */
 .buy-btn {
-  background: #3A3A3A;
+  background: #3a3a3a;
   color: #fff;
   padding: 12px 22px;
   border: none;
@@ -200,7 +516,6 @@ header {
   background: #000;
 }
 
-
 /* BUY BUTTON */
 .buy-btn {
   background: #000;
@@ -213,8 +528,6 @@ header {
   cursor: pointer;
 }
 
-
-
 /* NEWSLETTER SECTION */
 .newsletter {
   margin: 5%;
@@ -223,7 +536,7 @@ header {
   margin-top: 40px;
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 .newsletter-box {
@@ -271,18 +584,17 @@ header {
   cursor: pointer;
 }
 
-
 /* RESPONSIVE ------------------------------------ */
 
 /* LAPTOP - max 1200px */
-@media (max-width:1200px) {
-  .hero-text h1 { font-size: 32px; }
+@media (max-width: 1200px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
 }
 
 /* TABLET - max 992px */
-@media (max-width:992px) {
- 
-
+@media (max-width: 992px) {
   .hero {
     text-align: center;
     justify-content: center;
@@ -308,7 +620,6 @@ header {
 
 /* ===== SMALL DEVICES (MOBILE) ===== */
 @media (max-width: 600px) {
-
   /* Products Section */
   .products {
     padding: 20px 15px;
@@ -352,7 +663,6 @@ header {
     font-size: 14px;
   }
 
-  
   .products {
     display: flex;
     flex-direction: column;
